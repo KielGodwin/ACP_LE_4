@@ -1,0 +1,7 @@
+Student No.: 2
+Full Name: James, Lebron R
+Program: BSIT
+Age: 19
+Gender: M
+Birthday: 01/09/1998
+Contact No.: 09863698430

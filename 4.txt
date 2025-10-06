@@ -1,0 +1,7 @@
+Student No.: 4
+Full Name: Jordan, Michael B
+Program: BSCE
+Age: 40
+Gender: Male
+Birthday: 07/21/1986
+Contact No.: 0926162918

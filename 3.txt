@@ -1,0 +1,7 @@
+Student No.: 3
+Full Name: Bargas, Kiko Z
+Program: BSMEOW
+Age: 23
+Gender: Male
+Birthday: 08/31/1999
+Contact No.: 0986152618281

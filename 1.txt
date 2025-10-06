@@ -1,0 +1,7 @@
+Student No.: 1
+Full Name: Nunez, Godwin A
+Program: BSIT
+Age: 19
+Gender: Male
+Birthday: 03/07/2006
+Contact No.: 09634906220
