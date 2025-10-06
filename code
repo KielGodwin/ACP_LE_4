@@ -1,0 +1,86 @@
+import os
+
+doc_path = os.path.expanduser("~/Documents")
+
+def register_student():
+    
+    print("\n==== Student Records Menu ====")
+
+    student_no = input("Enter Student No.: ")
+    last_name = input("Enter Last Name: ")
+    first_name = input("Enter First Name: ")
+    middle_initial = input("Enter Middle Initial: ")
+    program = input("Enter Program: ")
+    age = input("Enter Age: ")
+    gender = input("Enter Gender: ")
+    birthday = input("Enter Birthday (MM/DD/YYYY): ")
+    contact_no = input("Enter Contact No.: ")
+
+    data = [
+        f"Student No.: {student_no}",
+        f"Full Name: {last_name}, {first_name} {middle_initial}",
+        f"Program: {program}",
+        f"Age: {age}",
+        f"Gender: {gender}",
+        f"Birthday: {birthday}",
+        f"Contact No.: {contact_no}"
+    ]
+
+    file_name = f"{student_no}.txt"
+    file_path = os.path.join(doc_path, file_name) 
+    
+    try:
+        with open(file_path, "w") as f:
+            for line in data:
+                f.write(line + "\n")
+        print(f"\nStudent record saved successfully at: {file_path}")
+    except Exception as e:
+        print(f"\nAn error occurred while saving the file: {e}")
+
+
+def open_student_record():
+    print("\n==== Open Student Record ====")
+    
+    student_no = input("Enter the Student No. to open: ")
+    
+    file_name = f"{student_no}.txt"
+    file_path = os.path.join(doc_path, file_name)
+    
+    try:
+        with open(file_path, "r") as f:
+            print("\n==== Student Record Found! ====")
+            for line in f:
+                print(line.strip()) 
+            print("===============================")
+
+    except FileNotFoundError:
+        print("\nStudent record not found.")
+
+
+def main():
+    while True: 
+        print("\n==================================")
+        print(" Student Records Management Menu")
+        print("==================================")
+        print("1. Register Student")
+        print("2. Open Student Record")
+        print("3. Exit")
+        print("===================================")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == '1':
+            register_student()
+        
+        elif choice == '2':
+            open_student_record()
+        
+        elif choice == '3':
+            print("\nGoodbye!") 
+            break 
+        
+        else:
+            print("\nInvalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
